@@ -1,0 +1,12 @@
+# Core Framework
+Django==6.0.4
+djangorestframework>=3.14.0
+
+# Authentication and JWT
+PyJWT>=2.8.0
+
+# Environment Configuration
+python-dotenv>=1.0.0
+
+# CORS Support
+django-cors-headers>=4.0.0

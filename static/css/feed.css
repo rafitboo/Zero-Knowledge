@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+    background-color: #050505;
+    background-image: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #050505 70%);
+    color: #e0e0e0;
+    font-family: 'Share Tech Mono', monospace;
+    min-height: 100vh;
+}
+
+/* --- THE FIX: Override Bootstrap's dark default colors --- */
+.text-success { color: #00ffcc !important; text-shadow: 0 0 5px rgba(0, 255, 204, 0.3); }
+.text-danger { color: #ff0055 !important; text-shadow: 0 0 5px rgba(255, 0, 85, 0.3); }
+.text-muted { color: #8a9ba8 !important; } /* Brighter gray for dates */
+.text-info { color: #00d2ff !important; } /* Brighter blue for @usernames */
+
+/* Feed Specific Styling */
+.post-card {
+    background: rgba(10, 10, 15, 0.9);
+    border: 1px solid #333;
+    border-left: 4px solid #444;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.post-card:hover {
+    border-left-color: #00ffcc;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.1);
+}
+
+.author-tag {
+    color: #00d2ff;
+    font-weight: bold;
+}
+
+/* The visual difference between Encrypted and Decrypted text */
+.ciphertext-block {
+    background: #000;
+    /* Removed the hardcoded dim color so text-success/danger can take over */
+    font-size: 0.95em; /* Increased size slightly for readability */
+    padding: 12px;
+    border-radius: 4px;
+    word-wrap: break-word;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #1f2933;
+    margin-top: 10px;
+}
+
+/* UI Elements */
+.cyber-input {
+    background-color: #000 !important;
+    border: 1px solid #444 !important;
+    color: #00ffcc !important;
+}
+
+/* Brighter Placeholder for the text area */
+.cyber-input::placeholder {
+    color: #6a7b8c !important; 
+}
+
+.cyber-input:focus {
+    border-color: #00ffcc !important;
+    box-shadow: 0 0 8px rgba(0, 255, 204, 0.4) !important;
+}

@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: zk_network_core
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - ./.env:/app/.env
+    environment:
+      - DEBUG=1
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    # Health check to monitor container status
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/admin/", "exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

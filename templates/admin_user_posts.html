@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZK // Admin Post Ledger</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+</head>
+<body data-user-id="{{ target_user.id }}" data-username="{{ target_user.username }}">
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-4 border-bottom border-secondary pb-3">
+            <div>
+                <h2 style="color: #00d2ff;">[ USER_POST_LEDGER ]</h2>
+                <div class="text-muted">Target operative: <span id="targetUsername">@{{ target_user.username }}</span></div>
+            </div>
+            <div class="d-flex gap-2">
+                <a href="/admin-console/" class="btn btn-outline-info btn-sm">RETURN_TO_CONSOLE</a>
+                <button id="deleteSelectedBtn" class="btn btn-outline-danger btn-sm" disabled>DELETE_SELECTED</button>
+            </div>
+        </div>
+
+        <div class="card admin-card p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                <div>
+                    <h4 class="mb-1" style="color: #00ffcc;">POSTS_FOR_@<span id="usernameHeader">{{ target_user.username }}</span></h4>
+                    <div class="text-muted" style="font-size: 0.85em;">Select one or more posts to delete them from this account.</div>
+                </div>
+                <div class="form-check text-muted">
+                    <input class="form-check-input" type="checkbox" id="selectAllPosts">
+                    <label class="form-check-label" for="selectAllPosts">SELECT_ALL</label>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-dark table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th style="width: 60px;">#</th>
+                            <th>CONTENT</th>
+                            <th style="width: 220px;">CREATED_AT</th>
+                            <th style="width: 90px;">PICK</th>
+                        </tr>
+                    </thead>
+                    <tbody id="postsTableBody">
+                        <tr>
+                            <td colspan="4" class="text-center text-muted">Loading posts...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/admin_posts.js' %}?v=20260508"></script>
+</body>
+</html>

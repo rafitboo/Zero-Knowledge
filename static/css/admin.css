@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body {
+    background-color: #050505;
+    background-image: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #050505 70%);
+    color: #e0e0e0;
+    font-family: 'Share Tech Mono', monospace;
+    min-height: 100vh;
+}
+
+/* Consistent color overrides across all pages */
+.text-success { color: #00ffcc !important; text-shadow: 0 0 5px rgba(0, 255, 204, 0.3); }
+.text-danger { color: #ff0055 !important; text-shadow: 0 0 5px rgba(255, 0, 85, 0.3); }
+.text-muted { color: #8a9ba8 !important; }
+.text-info { color: #00d2ff !important; }
+
+.admin-card {
+    background: rgba(10, 10, 15, 0.9);
+    border: 1px solid #00d2ff;
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.15);
+}
+
+.table-dark {
+    --bs-table-bg: transparent;
+    border-color: #333;
+    color: #e0e0e0;
+}
+
+.table-dark th {
+    color: #00d2ff;
+    border-bottom-color: #444;
+}
+
+.table-dark td {
+    border-bottom-color: #333;
+}
+
+.table-dark tbody tr:hover {
+    background-color: rgba(0, 210, 255, 0.05) !important;
+}
+
+.admin-posts-cell,
+.admin-actions-cell {
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.admin-actions-cell select {
+    min-width: 110px;
+}
+
+.admin-actions-cell .btn {
+    margin-left: 0 !important;
+}
+
+.btn-outline-danger {
+    color: #ff0055;
+    border-color: #ff0055;
+}
+
+.btn-outline-danger:hover {
+    background-color: #ff0055;
+    border-color: #ff0055;
+}
+
+.btn-success {
+    background-color: #00ffcc;
+    border-color: #00ffcc;
+    color: #000;
+}
+
+.btn-success:hover {
+    background-color: #00ffcc;
+    border-color: #00ffcc;
+    color: #000;
+}
+
+.btn-outline-info {
+    color: #00d2ff;
+    border-color: #00d2ff;
+}
+
+.btn-outline-info:hover {
+    background-color: #00d2ff;
+    border-color: #00d2ff;
+    color: #000;
+}
+
+.cyber-input {
+    background-color: #000 !important;
+    border: 1px solid #444 !important;
+    color: #00ffcc !important;
+}
+
+.cyber-input:focus {
+    border-color: #00ffcc !important;
+    box-shadow: 0 0 8px rgba(0, 255, 204, 0.4) !important;
+}
